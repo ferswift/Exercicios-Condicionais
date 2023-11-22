@@ -20,12 +20,11 @@ Teste seu programa para outras entradas.
 
 */
 
-const valorDaParcela = valorDoProduto / 100 / quantidadeDoParcelamento; // cada parcela custa 100 reais
+const valorDaParcelaEmReais = valorDoProduto / quantidadeDoParcelamento / 100; // Valor da parcela em Reais
+const parcelasPagas = valorPago / valorDaParcelaEmReais;
 
-const parcelasPagas = valorPago / valorDaParcela; // 300 / 100 = 3
-
-const parcelasRestantes = quantidadeDoParcelamento - parcelasPagas; // Restam 7 parcelas.
-
-const resultado = parcelasRestantes * valorDaParcela; // 7 * 100
-
-console.log(`Restam ${parcelasRestantes} parcelas de R$${resultado}`);
+console.log(
+  `Restam ${
+    quantidadeDoParcelamento - parcelasPagas
+  } parcelas de R$${valorDaParcelaEmReais.toFixed(2)}`
+);

@@ -21,24 +21,25 @@ Lembre-se de cuidar para que o valor monetário tenha sempre duas casas decimais
 */
 
 const valorDoProdutoEmReais = valorDoProduto / 100;
+let desconto, valorFinal;
 
 if (tipoDePagamento === "debito" || tipoDePagamento === "dinheiro") {
-  const desconto = 0.1;
-  const valorFinal = (
+  desconto = 0.1;
+  valorFinal = (
     valorDoProdutoEmReais -
     valorDoProdutoEmReais * desconto
   ).toFixed(2);
   console.log(`O valor em ${tipoDePagamento} é de R$ ${valorFinal}`);
 } else if (tipoDePagamento === "credito") {
-  const desconto = 0.05;
-  const valorFinal = (
+  desconto = 0.05;
+  valorFinal = (
     valorDoProdutoEmReais -
     valorDoProdutoEmReais * desconto
   ).toFixed(2);
   console.log(`O valor em ${tipoDePagamento} é de R$ ${valorFinal}`);
 } else if (tipoDePagamento === "cheque") {
-  const desconto = 0.03;
-  const valorFinal = (
+  desconto = 0.03;
+  valorFinal = (
     valorDoProdutoEmReais -
     valorDoProdutoEmReais * desconto
   ).toFixed(2);

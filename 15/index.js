@@ -11,7 +11,7 @@ Escreva um código que imprima no console apenas o apelido (se o apelido estiver
 
 if (apelido) {
   console.log(`${apelido}`);
-} else if (primeiroNome || sobrenome) {
+} else if (sobrenome) {
   console.log(`${primeiroNome} ${sobrenome}`);
 } else {
   console.log(`${primeiroNome}`);

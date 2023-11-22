@@ -28,6 +28,23 @@ if (
   caractere === "u"
 ) {
   console.log("Vogal Minúscula");
+} else if (
+  caractere == 1 ||
+  caractere == 2 ||
+  caractere == 3 ||
+  caractere == 4 ||
+  caractere == 5 ||
+  caractere == 6 ||
+  caractere == 7 ||
+  caractere == 8 ||
+  caractere == 9 ||
+  caractere == 0
+) {
+  if (typeof caractere === "string") {
+    console.log('É número "string" ');
+  } else if (typeof caractere === "number") {
+    console.log("é número number");
+  }
 } else {
-  console.log("Cosoante ou número.");
+  console.log("Cosoante");
 }

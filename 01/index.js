@@ -1,4 +1,4 @@
-const jogada1 = "papel";
+const jogada1 = "pedra";
 const jogada2 = "tesoura";
 
 //seu código aqui

@@ -7,9 +7,15 @@ const mesesDecorridos = 12;
 // Soma das parcelas já pagas pelo aluno nos meses anteriores (em centavos). Se for igual a 18 mil reais, o aluno não deve pagar mais nada, pois já quitou a dívida.
 const totalJaPagoPeloAluno = 1000000;
 
-if (mesesDecorridos >= 60) {
-  console.log("Não paga nada");
-} else if (rendaMensalEmCentavos >= 200000) {
-  const parcelasAPagar = (rendaMensalEmCentavos * 0.18) / 100;
-  console.log(`O valor da parcela desse mês é R$${parcelasAPagar}`);
+if (mesesDecorridos > 60) {
+  console.log("Não deve mais nada para cubos academy.");
+} else if (totalJaPagoPeloAluno >= 1800000) {
+  console.log("Todas as parcelas do curso estão quitadas.");
+} else if (rendaMensalEmCentavos < 200000) {
+  console.log(
+    "O valor da parcela desse mês é R$ 0 reais. Nenhum valor é devido pois a renda do estudante está abaixo do valor mínimo de R$ 2000 reais"
+  );
+} else {
+  const valorDaParcela = (rendaMensalEmCentavos / 100) * 0.18;
+  console.log(`O valor da parcela desse mês é de: R$ ${valorDaParcela} reais.`);
 }
